@@ -1,0 +1,162 @@
+with open('day_3_text', 'r') as f:
+    input = f.read().splitlines()
+    
+    zeros = 0
+    ones = 0 
+    oxygen_zero = []
+    co_two = []
+    for line in input:
+        if line[0] == "0":
+            zeros += 1
+        if line[0] == "1":
+            ones += 1
+    if zeros > ones:
+        for line in input:
+            if line[0] == "0":
+                oxygen_zero.append(line) 
+                
+    elif ones > zeros:
+        for line in input:
+            if line[0] == "1":
+                oxygen_zero.append(line) 
+
+    zeros = 0
+    ones = 0 
+    oxygen_one = []
+    for line in oxygen_zero:
+        if line[1] == "0":
+            zeros += 1
+        if line[1] == "1":
+            ones += 1
+    if zeros > ones:
+        for line in oxygen_zero:
+            if line[1] == "0":
+                oxygen_one.append(line) 
+                
+    elif ones > zeros:
+        for line in oxygen_zero:
+            if line[0] == "1":
+                oxygen_one.append(line) 
+    print(oxygen_one)
+    # print(oxygen)
+    # zeros = 0
+    # ones = 0 
+    # for line in input:
+    #     if line[2] == "0":
+    #         zeros += 1
+    #     if line[2] == "1":
+    #         ones += 1
+    # if zeros > ones:
+    #     print('3rd bit of gamma is 0')
+    # else:
+    #     print('3rd bit of gamma is 1')
+
+    # zeros = 0
+    # ones = 0 
+    # for line in input:
+    #     if line[3] == "0":
+    #         zeros += 1
+    #     if line[3] == "1":
+    #         ones += 1
+    # if zeros > ones:
+    #     print('4th bit of gamma is 0')
+    # else:
+    #     print('4th bit of gamma is 1')
+
+    # zeros = 0
+    # ones = 0 
+    # for line in input:
+    #     if line[4] == "0":
+    #         zeros += 1
+    #     if line[4] == "1":
+    #         ones += 1
+    # if zeros > ones:
+    #     print('5th bit of gamma is 0')
+    # else:
+    #     print('5th bit of gamma is 1')
+
+
+    # zeros = 0
+    # ones = 0 
+    # for line in input:
+    #     if line[5] == "0":
+    #         zeros += 1
+    #     if line[5] == "1":
+    #         ones += 1
+    # if zeros > ones:
+    #     print('5th bit of gamma is 0')
+    # else:
+    #     print('5th bit of gamma is 1')
+
+    # zeros = 0
+    # ones = 0 
+    # for line in input:
+    #     if line[6] == "0":
+    #         zeros += 1
+    #     if line[6] == "1":
+    #         ones += 1
+    # if zeros > ones:
+    #     print('5th bit of gamma is 0')
+    # else:
+    #     print('5th bit of gamma is 1')
+
+    # zeros = 0
+    # ones = 0 
+    # for line in input:
+    #     if line[7] == "0":
+    #         zeros += 1
+    #     if line[7] == "1":
+    #         ones += 1
+    # if zeros > ones:
+    #     print('5th bit of gamma is 0')
+    # else:
+    #     print('5th bit of gamma is 1')
+
+    # zeros = 0
+    # ones = 0 
+    # for line in input:
+    #     if line[8] == "0":
+    #         zeros += 1
+    #     if line[8] == "1":
+    #         ones += 1
+    # if zeros > ones:
+    #     print('5th bit of gamma is 0')
+    # else:
+    #     print('5th bit of gamma is 1')
+
+    # zeros = 0
+    # ones = 0 
+    # for line in input:
+    #     if line[9] == "0":
+    #         zeros += 1
+    #     if line[9] == "1":
+    #         ones += 1
+    # if zeros > ones:
+    #     print('5th bit of gamma is 0')
+    # else:
+    #     print('5th bit of gamma is 1')
+
+    # zeros = 0
+    # ones = 0 
+    # for line in input:
+    #     if line[10] == "0":
+    #         zeros += 1
+    #     if line[10] == "1":
+    #         ones += 1
+    # if zeros > ones:
+    #     print('5th bit of gamma is 0')
+    # else:
+    #     print('5th bit of gamma is 1')
+
+    # zeros = 0
+    # ones = 0 
+    # for line in input:
+    #     if line[11] == "0":
+    #         zeros += 1
+    #     if line[11] == "1":
+    #         ones += 1
+    # if zeros > ones:
+    #     print('5th bit of gamma is 0')
+    # else:
+    #     print('5th bit of gamma is 1')
+

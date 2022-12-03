@@ -1,0 +1,18 @@
+
+with open('day_2_text', 'r') as f:
+    input = f.read().splitlines()
+
+    horizontal = 0
+    depth = 0 
+    aim = 0 
+    for line in input:
+        k, v = line.split(' ')
+        if k == 'forward':
+            horizontal += int(v)
+            depth += aim * int(v)
+        if k == 'down':
+            aim += int(v)
+        if k == 'up':
+            aim -= int(v)
+    print(horizontal, depth, aim)
+

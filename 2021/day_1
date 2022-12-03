@@ -1,0 +1,19 @@
+import numpy as np
+
+
+with open('day_1_text', 'r') as f:
+    numbers_list = f.read().splitlines()
+    measurements = [int(entry.strip()) for entry in numbers_list]
+    # print(measurements)
+
+    sliding_windows = np.convolve(measurements, np.ones(3), 'valid')
+
+
+    prev_entry = sliding_windows[0] 
+    increases = 0
+    for entry in sliding_windows[1:]:
+        if entry > prev_entry:
+            increases += 1
+        prev_entry = entry
+        print(increases)
+   
