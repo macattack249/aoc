@@ -1,0 +1,20 @@
+from itertools import groupby
+
+with open('day_1_input', 'r') as f:
+    input = f.read().splitlines()
+    res = [list(sub) for ele, sub in groupby(input, key = bool) if ele]
+
+# part 1
+lister = []
+for ele in res:
+    test = sum([int(i) for i in ele])
+    lister.append(test)
+print(max(lister))
+
+
+# part 2
+lister = []
+for ele in res:
+    test = sum([int(i) for i in ele])
+    lister.append(test)
+print(sum(sorted(lister, reverse = True)[:3]))

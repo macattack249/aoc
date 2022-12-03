@@ -1,0 +1,50 @@
+
+with open('day_2_text', 'r') as f:
+    input = f.read().splitlines()
+
+score = 0
+for k in input:
+    if k[0] == 'A' and k[2] == 'Y':
+        score += 8
+    if k[0] == 'A' and k[2] == 'X':
+        score += 4
+    if k[0] == 'A' and k[2] == 'Z':
+        score += 3
+    if k[0] == 'B' and k[2] == 'X':
+        score += 1
+    if k[0] == 'B' and k[2] == 'Y':
+        score += 5
+    if k[0] == 'B' and k[2] == 'Z':
+        score += 9
+    if k[0] == 'C' and k[2] == 'Z':
+        score += 6
+    if k[0] == 'C' and k[2] == 'X':
+        score += 7
+    if k[0] == 'C' and k[2] == 'Y':
+        score += 2
+print(score)
+    
+#part 2
+score = 0
+for k in input:
+    if k[0] == 'A' and k[2] == 'Y':
+        score += 4
+    if k[0] == 'A' and k[2] == 'X':
+        score += 3
+    if k[0] == 'A' and k[2] == 'Z':
+        score += 8
+    if k[0] == 'B' and k[2] == 'X':
+        score += 1
+    if k[0] == 'B' and k[2] == 'Y':
+        score += 5
+    if k[0] == 'B' and k[2] == 'Z':
+        score += 9
+    if k[0] == 'C' and k[2] == 'Z':
+        score += 7
+    if k[0] == 'C' and k[2] == 'X':
+        score += 2
+    if k[0] == 'C' and k[2] == 'Y':
+        score += 6
+print(score)
+
+    
