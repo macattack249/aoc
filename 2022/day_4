@@ -1,0 +1,49 @@
+import time
+
+with open('day_4_text', 'r') as f:
+    input = f.read().splitlines()
+
+# part 1
+yes = 0
+no = 0  
+for line in input:
+    parts = line.split(",")
+    first_part = parts[0]
+    second_part = parts[1]
+    first_ints = first_part.split("-")
+    second_ints = second_part.split("-")
+    first_range = []
+    second_range = []
+    for i in range(int(first_ints[0]), 1 + int(first_ints[1])):
+        first_range.append(i)
+    for i in range(int(second_ints[0]), 1 + int(second_ints[1])):
+        second_range.append(i)
+    if all(i in first_range for i in second_range) or all(i in second_range for i in first_range):
+        yes += 1  
+    else:
+        no += 1
+print(yes)
+
+
+# part 2
+yes = 0
+no = 0  
+for line in input:
+    parts = line.split(",")
+    first_part = parts[0]
+    second_part = parts[1]
+    first_ints = first_part.split("-")
+    second_ints = second_part.split("-")
+    first_range = []
+    second_range = []
+    for i in range(int(first_ints[0]), 1 + int(first_ints[1])):
+        first_range.append(i)
+    for i in range(int(second_ints[0]), 1 + int(second_ints[1])):
+        second_range.append(i)
+    if any(i in first_range for i in second_range) or any(i in second_range for i in first_range):
+        yes += 1  
+    else:
+        no += 1
+print(yes)
+
+
