@@ -6,10 +6,8 @@ yes = 0
 no = 0  
 for line in input:
     parts = line.split(",")
-    first_part = parts[0]
-    second_part = parts[1]
-    first_ints = first_part.split("-")
-    second_ints = second_part.split("-")
+    first_part, second_part = parts[0], parts[1]
+    first_ints, second_ints = first_part.split("-"), second_part.split("-")
     first_range = []
     second_range = []
     for i in range(int(first_ints[0]), 1 + int(first_ints[1])):
@@ -28,10 +26,8 @@ yes = 0
 no = 0  
 for line in input:
     parts = line.split(",")
-    first_part = parts[0]
-    second_part = parts[1]
-    first_ints = first_part.split("-")
-    second_ints = second_part.split("-")
+    first_part, second_part = parts[0], parts[1]
+    first_ints, second_ints = first_part.split("-"), second_part.split("-")
     first_range = []
     second_range = []
     for i in range(int(first_ints[0]), 1 + int(first_ints[1])):
