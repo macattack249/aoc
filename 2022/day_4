@@ -1,5 +1,3 @@
-import time
-
 with open('day_4_text', 'r') as f:
     input = f.read().splitlines()
 
